@@ -1,6 +1,5 @@
 import { AlertCircle } from "lucide-react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 type Props = {
   name: string;
@@ -51,14 +50,6 @@ const InputField = ({
           }`}
         />
         <i className="absolute left-2 bottom-3 text-primary">{icon}</i>
-        {type === "password" && !reg && (
-          <Link
-            to="/auth/forgot"
-            className="text-xs leading-relaxed absolute right-2 bottom-3 text-orange-600 "
-          >
-            Forgot password?
-          </Link>
-        )}
         {type === "password" && reg && (
           <p
             onClick={togglePasswordVisibility}

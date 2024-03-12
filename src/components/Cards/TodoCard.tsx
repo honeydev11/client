@@ -4,7 +4,7 @@ import {
   updateTaskRedux,
 } from "@/redux/slices/TaskSlice";
 import { useDeleteTaskMutation, useUpdateTaskMutation } from "@/services/task";
-import { Trash, Trash2, TrashIcon, X } from "lucide-react";
+import { Trash2 } from "lucide-react";
 import { LiaCheckDoubleSolid } from "react-icons/lia";
 import { useDispatch } from "react-redux";
 
