@@ -8,17 +8,19 @@ import { useDispatch, useSelector } from "react-redux";
 type Props = {};
 
 function Home({}: Props) {
-  const { data } = useGetAllTasksQuery("getAll");
+  const { data, refetch } = useGetAllTasksQuery("getAll");
   const dispatch = useDispatch();
 
   const user = useSelector((state: RootState) => state.user);
+
   useEffect(() => {
+    refetch();
     if (!data) return;
     else {
       console.log("data: ", data);
       dispatch(setTasks(data));
     }
-  }, [data]);
+  }, [data, refetch]);
 
   return (
     <div className="flex flex-col items-center h-full">

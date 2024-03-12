@@ -18,6 +18,15 @@ const MainHeader = () => {
         >
           Create Todo
         </button>
+        <button
+          onClick={() => {
+            localStorage.removeItem("token");
+            navigate("/auth");
+          }}
+          className="bg-blue-500 rounded-lg hover:bg-blue-600 py-2 px-4 shadow-lg font-bold text-white"
+        >
+          Logout
+        </button>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import {
   updateTaskRedux,
 } from "@/redux/slices/TaskSlice";
 import { useDeleteTaskMutation, useUpdateTaskMutation } from "@/services/task";
-import { X } from "lucide-react";
+import { Trash, Trash2, TrashIcon, X } from "lucide-react";
 import { LiaCheckDoubleSolid } from "react-icons/lia";
 import { useDispatch } from "react-redux";
 
@@ -35,8 +35,8 @@ const TodoCard = ({ task }: Props) => {
 
   return (
     <div className="h-60 w-60 relative border rounded-xl shadow-sm hover:shadow-xl p-5 flex flex-col gap-3">
-      <X
-        className="absolute right-2 top-2 border rounded-full cursor-pointer p-0.5 border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
+      <Trash2
+        className="absolute right-2 top-2 border rounded-full cursor-pointer p-1 border-red-500  hover:bg-red-500 hover:text-white"
         onClick={handleDelete}
       />
       <p className="text-center text-2xl text-orange-500 underline underline-offset-4">
